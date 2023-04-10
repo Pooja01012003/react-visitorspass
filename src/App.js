@@ -17,7 +17,7 @@ export default function App() {
   const [Name, setName] = useState();
   const [Email, setEmail] = useState();
   const [PhoneNumber, setPhoneNumber] = useState();
-  const [Level, setLevel] = useState();
+  const [Vehicle, setVehicle] = useState();
   const values = [
     {
       key: 'Refresh',
@@ -43,17 +43,17 @@ export default function App() {
   const userData = [
     {
       Id: 1,
-      Name: 'Poorna',
+      Name: 'Pooja',
       Email: 'poorna@gmail.com',
       PhoneNumber: 1234567891,
-      Level: 'Beginner',
+      Vehicle: 'TN56BE6789',
     },
     {
       Id: 2,
       Name: 'Admin',
       Email: 'admin@gmail.com',
       PhoneNumber: 1987654321,
-      Level: 'Beginner',
+      Vehicle: 'TN32BC6789',
     },
   ];
   //columns
@@ -87,9 +87,9 @@ export default function App() {
       maxWidth: 250,
     },
     {
-      key: 'Level',
-      name: 'Level',
-      fieldName: 'Level',
+      key: 'Vehicle',
+      name: 'Vehicle',
+      fieldName: 'Vehicle',
       minWidth: 150,
       maxWidth: 250,
     },
@@ -102,7 +102,7 @@ export default function App() {
       Name: Name,
       Email: Email,
       PhoneNumber: PhoneNumber,
-      Level: Level,
+      Vehicle: Vehicle,
     };
     setnewInfo([...newInfo, setData]);
   }
@@ -122,7 +122,7 @@ export default function App() {
 
   return (
     <div>
-      <h2>Users</h2>
+      <h2>VISITORS PASS MANAGEMENT SYSTEM</h2>
       <CommandBar items={values} />
       <DetailsList items={newInfo} columns={columns} />
       <Panel
@@ -161,11 +161,11 @@ export default function App() {
               setPhoneNumber(values);
             }}
           />
-          <Label htmlFor={textFieldId}>Level</Label>
+          <Label htmlFor={textFieldId}>Vehicle</Label>
           <TextField
             id={textFieldId}
             onChange={(_event, values) => {
-              setLevel(values);
+              setVehicle(values);
             }}
           />
         </div>
